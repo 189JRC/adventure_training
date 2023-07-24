@@ -11,22 +11,22 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
     <title>AT</title>
+
 </head>
 
 <body>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10">
-                <div class="alert alert-success">
-                    <div id="content">
-                        {{ content | safe}}
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="page-content">
+        {% block content %} {% endblock %}
     </div>
-
-    <!-- Your footer content here -->
 </body>
+
+<style>
+    .information {
+        padding: 10px 20px;
+        background: rgba(111, 142, 125, 0.7);
+        border: 1px solid black;
+        border-radius: 10px;
+    }
+</style>
 
 </html>

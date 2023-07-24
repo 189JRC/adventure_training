@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% for provider in providers %}
+<br>
+<div class="container">
+    <div class="row">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
+            <div class="information">
+                <h2>{{ provider.company_name }}</h2>
+                <hr>
+                <p>{{ provider.contact_email }}</p>
+                <p>{{ provider.bio }}</p>
+                <p>{{ provider.created_at }}</p>
+            </div>
+        </div>
+        <div class="col-md-1"></div>
+    </div>
+</div>
+{% endfor %}
+{% endblock %}
